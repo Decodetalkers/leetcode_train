@@ -1,0 +1,10 @@
+[package]
+name = "leetcode"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[[test]]
+name = "fraction_addition"
+path = "bin/fraction_additon.rs"
