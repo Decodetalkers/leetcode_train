@@ -59,7 +59,6 @@ impl<'a> Add for StrFraction<'a> {
             return "0/1".to_string();
         }
         loop {
-            println!("{new_child}, {new_mum}");
             let check_list = check_number(new_child);
             if check_list.is_empty() {
                 break;
