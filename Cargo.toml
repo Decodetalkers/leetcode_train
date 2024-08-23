@@ -8,3 +8,7 @@ edition = "2021"
 [[test]]
 name = "fraction_addition"
 path = "bin/fraction_additon.rs"
+
+[[test]]
+name = "two_sum"
+path = "bin/two_sum.rs"
