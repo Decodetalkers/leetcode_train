@@ -16,3 +16,7 @@ path = "bin/two_sum.rs"
 [[test]]
 name = "two_number_add"
 path = "bin/two_numbers.rs"
+
+[[test]]
+name = "substring_without_repeating"
+path = "bin/substring_without_repeating.rs"
