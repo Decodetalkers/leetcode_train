@@ -20,3 +20,6 @@ path = "bin/two_numbers.rs"
 [[test]]
 name = "substring_without_repeating"
 path = "bin/substring_without_repeating.rs"
+[[test]]
+name = "median_sorted_arrays"
+path = "bin/median_sorted_arrays.rs"
