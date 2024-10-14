@@ -4,7 +4,6 @@ struct Solution;
 
 impl Solution {
     pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
-
         let mut box_vals: HashMap<i32, Vec<usize>> = HashMap::new();
 
         for (index, num) in nums.iter().enumerate() {
@@ -24,7 +23,7 @@ impl Solution {
                     if *another_index == index {
                         continue;
                     }
-                    start_index =index as i32;
+                    start_index = index as i32;
                     end_index = *another_index as i32;
                     break 'out;
                 }

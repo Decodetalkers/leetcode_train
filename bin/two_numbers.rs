@@ -115,11 +115,11 @@ fn test_two_number() {
 }
 #[test]
 fn test_two_number2() {
-    let left = trans_from_vec_to_listnode(vec![9,9,9,9,9,9,9]);
-    let right = trans_from_vec_to_listnode(vec![9,9,9,9]);
+    let left = trans_from_vec_to_listnode(vec![9, 9, 9, 9, 9, 9, 9]);
+    let right = trans_from_vec_to_listnode(vec![9, 9, 9, 9]);
 
     assert_eq!(
         Solution::add_two_numbers(left, right),
-        trans_from_vec_to_listnode(vec![8,9,9,9,0,0,0,1])
+        trans_from_vec_to_listnode(vec![8, 9, 9, 9, 0, 0, 0, 1])
     )
 }
