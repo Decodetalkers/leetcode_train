@@ -41,3 +41,7 @@ path = "bin/integer_reverse.rs"
 [[test]]
 name = "string_to_integer"
 path = "bin/string_to_integer.rs"
+
+[[test]]
+name = "palindrome_number"
+path = "bin/palindrome_number.rs"
