@@ -28,3 +28,8 @@ path = "bin/median_sorted_arrays.rs"
 [[test]]
 name = "longest_palindromic_substring"
 path = "bin/longest_palindromic_substring.rs"
+
+
+[[test]]
+name = "zigzag_conversion"
+path = "bin/zigazg.rs"
