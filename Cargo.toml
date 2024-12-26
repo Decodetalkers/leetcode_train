@@ -37,3 +37,7 @@ path = "bin/zigazg.rs"
 [[test]]
 name = "integer_reverse"
 path = "bin/integer_reverse.rs"
+
+[[test]]
+name = "string_to_integer"
+path = "bin/string_to_integer.rs"
