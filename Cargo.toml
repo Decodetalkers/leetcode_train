@@ -33,3 +33,7 @@ path = "bin/longest_palindromic_substring.rs"
 [[test]]
 name = "zigzag_conversion"
 path = "bin/zigazg.rs"
+
+[[test]]
+name = "integer_reverse"
+path = "bin/integer_reverse.rs"
