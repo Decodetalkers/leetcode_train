@@ -53,3 +53,7 @@ path = "bin/regular_expression.rs"
 [[test]]
 name = "container_water"
 path = "bin/container_water.rs"
+
+[[test]]
+name = "integer_to_roman"
+path = "bin/integer_to_roman.rs"
