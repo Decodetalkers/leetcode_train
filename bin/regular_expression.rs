@@ -17,9 +17,6 @@ impl Solution {
         loop {
             if is_repeating {
                 if current_pattern != ANY_CHAR && current_pattern != current_remembered {
-                    println!(
-                        "pre_remembered: {current_remembered}, pre_pattern: {current_pattern}"
-                    );
                     let Some(next_pattern) = p_iter.next() else {
                         return false;
                     };
@@ -27,7 +24,6 @@ impl Solution {
                     is_repeating = false;
                     // NOTE: if there is **, this is illegal, so I do not consider that
                     current_pattern = next_pattern;
-                    println!("current_remembered: {current_remembered}, current_pattern: {current_pattern}");
                     continue;
                 }
                 let Some(next_remembered) = s_iter.next() else {
