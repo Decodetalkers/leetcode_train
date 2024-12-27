@@ -45,3 +45,7 @@ path = "bin/string_to_integer.rs"
 [[test]]
 name = "palindrome_number"
 path = "bin/palindrome_number.rs"
+
+[[test]]
+name = "regular_expression"
+path = "bin/regular_expression.rs"
