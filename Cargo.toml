@@ -49,3 +49,7 @@ path = "bin/palindrome_number.rs"
 [[test]]
 name = "regular_expression"
 path = "bin/regular_expression.rs"
+
+[[test]]
+name = "container_water"
+path = "bin/container_water.rs"
