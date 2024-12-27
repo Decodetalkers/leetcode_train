@@ -6,6 +6,7 @@ impl Solution {
         if p.is_empty() && !s.is_empty() {
             return false;
         }
+
         let mut s_iter = s.chars();
         let mut p_iter = p.chars();
 
@@ -14,32 +15,34 @@ impl Solution {
         let mut is_repeating = false;
 
         loop {
-            println!("is repating {is_repeating}");
             if is_repeating {
-                println!("is_repeating");
                 if current_pattern != ANY_CHAR && current_pattern != current_remembered {
+                    println!(
+                        "pre_remembered: {current_remembered}, pre_pattern: {current_pattern}"
+                    );
                     let Some(next_pattern) = p_iter.next() else {
-                        println!("return false");
                         return false;
                     };
 
-                    println!("stop repeating");
                     is_repeating = false;
                     // NOTE: if there is **, this is illegal, so I do not consider that
                     current_pattern = next_pattern;
+                    println!("current_remembered: {current_remembered}, current_pattern: {current_pattern}");
+                    continue;
                 }
                 let Some(next_remembered) = s_iter.next() else {
-                    println!("stop repating return false");
                     return p_iter.next().is_none();
                 };
                 current_remembered = next_remembered;
                 continue;
             }
             if current_pattern != ANY_CHAR && current_pattern != current_remembered {
-                println!("stop repating return false");
-                return false;
+                let Some(UNIQUE_CHAR) = p_iter.next() else {
+                    return false;
+                };
+                is_repeating = true;
+                continue;
             }
-            println!("{current_remembered},{current_pattern}");
             match (p_iter.next(), s_iter.next()) {
                 (Some(UNIQUE_CHAR), Some(next_remembered)) => {
                     is_repeating = true;
@@ -49,6 +52,7 @@ impl Solution {
                     current_remembered = next_remembered;
                     current_pattern = next_pattern;
                 }
+                (Some(UNIQUE_CHAR), None) => return p_iter.next().is_none(),
                 (Some(_), None) | (None, Some(_)) => {
                     return false;
                 }
@@ -69,4 +73,5 @@ fn check() {
     ));
     assert!(Solution::is_match("ab".to_string(), ".*".to_string()));
     assert!(Solution::is_match("abcd".to_string(), "ab.*".to_string()));
+    assert!(Solution::is_match("aab".to_string(), "c*a*b".to_string()));
 }
